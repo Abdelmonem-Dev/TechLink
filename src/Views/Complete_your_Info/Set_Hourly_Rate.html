@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set Your Hourly Rate</title>
+    <link rel="stylesheet" href="Your_Info_styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <h1>Now, let’s set your hourly rate.</h1>
+            <p>Clients will see this rate on your profile and in search results once you publish your profile. You can adjust your rate every time you submit a proposal.</p>
+            <form action="data_handler.php" method="post">
+                <label for="rate">Hourly rate</label>
+                <input type="number" id="rate" name="rate" min="3" max="999" required>
+                <div class="fee-info">
+                    <p>Service fee: <span id="service-fee">-0.00</span></p>
+                    <p>You'll get: <span id="net-rate">0.00</span></p>
+                </div>
+                <div class="buttons">
+                    <button type="button" class="btn-secondary" onclick="Back()">Back</button>
+                    <button type="submit" class="btn-primary">Next</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script>
+        document.getElementById('rate').addEventListener('input', function () {
+            const rate = parseFloat(this.value);
+            const fee = rate * 0.20; // Example service fee calculation
+            const netRate = rate - fee;
+            document.getElementById('service-fee').textContent = `-${fee.toFixed(2)}`;
+            document.getElementById('net-rate').textContent = netRate.toFixed(2);
+        });
+        function Back() {
+            window.location.href = "Write_Bio.html";
+        }
+    </script>
+</body>
+</html>

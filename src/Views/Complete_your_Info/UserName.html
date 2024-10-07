@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enter Username</title>
+    <link rel="stylesheet" href="Your_Info_styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="content">
+            <h1>Choose a Username</h1>
+            <p>This is the name that will represent you on the platform. Make sure it is unique and professional.</p>
+            <form action="data_handler.php" method="POST" id="usernameForm">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" placeholder="Enter your username" required>
+                <button type="submit" class="btn-primary">Next, add your contact info</button>
+            </form>
+        </div>
+    </div>
+    <script>
+        document.getElementById('usernameForm').addEventListener('submit', function(event) {
+    const username = document.getElementById('username').value;
+    if (username.trim() === '') {
+        alert('Username cannot be empty');
+        event.preventDefault();
+    }
+});
+
+    </script>
+</body>
+</html>

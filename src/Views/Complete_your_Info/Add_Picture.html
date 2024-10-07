@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Picture</title>
+    <link rel="stylesheet" href="Your_Info_styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="content">
+            <h1>Great. Now upload a picture to complete your profile.</h1>
+            <p>Help people recognize you at a glance. Upload a clear picture of yourself. You can always change it later; just make sure you choose a good one now.</p>
+            <form action="data_handler.php" method="post" enctype="multipart/form-data">
+                <div class="form-group">
+                    <input id="file-upload" type="file" name="profilePicture" required hidden>
+                    <label for="file-upload" class="custom-file-upload">
+                        <div class="image-container">
+                            <img src="../abd.jpg" alt="Upload icon">
+                        </div>
+                   </label>
+                    <span id="file-info" class="file-chosen-text">No file chosen</span>
+                </div>
+                <div class="buttons">
+                    <button type="button" class="btn-secondary" onclick="Back()">Back</button>
+                    <a href="Write_Bio.html">Skip for now</a>
+                    <button type="submit" class="btn-primary">Next</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script>
+        document.getElementById('file-upload').addEventListener('change', function(event) {
+            const file = event.target.files[0];
+            const fileChosenText = file ? file.name : 'No file chosen';
+            document.getElementById('file-info').textContent = fileChosenText; // Corrected ID here
+        });
+
+        function Back() {
+            window.location.href = "Main_Services.html";
+        }
+    </script>
+</body>
+</html>

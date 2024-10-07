@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Created</title>
+    <link rel="stylesheet" href="Your_Info_styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="loading">
+            <div class="spinner"></div>
+            <h1>Your Account Created</h1>
+            <p id="loadingMessage">Setting up your account...</p>
+        </div>
+    </div>
+    <script>
+        let counter = 0;
+        const messages = ["Setting up your account...", "Almost there...", "Just a few more seconds..."];
+        const interval = setInterval(() => {
+            document.getElementById('loadingMessage').textContent = messages[counter % messages.length];
+            counter++;
+        }, 2000); // Change message every 1 second
+
+        document.addEventListener("DOMContentLoaded", function() {
+            setTimeout(function() {
+                clearInterval(interval); // Clear interval to stop changing messages
+                window.location.href = "../Main1.php"; // Redirect after all messages are displayed
+            }, 6000); // Extend delay to 6 seconds before redirect
+        });
+    </script>
+</body>
+</html>

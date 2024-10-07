@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Write a Bio</title>
+    <link rel="stylesheet" href="Your_Info_styles.css">
+
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <h1>Great. Now write a bio to tell the world about yourself.</h1>
+            <p>Help people get to know you at a glance. What work do you do best? Tell them clearly, using paragraphs or bullet points. You can always edit later; just make sure you proofread now.</p>
+            <form action="data_handler.php" method="post">
+                <textarea id="bio" name="bio" rows="5" placeholder="Enter your top skills, experiences, and interests. This is one of the first things clients will see on your profile." required></textarea>
+                <div class="buttons">
+                    <button type="button" class="btn-secondary" onclick="Back()">Back</button>
+                    <button type="submit" class="btn-primary">Next</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+
+     function Back() {
+            window.location.href = "Add_Picture.html";
+        }
+
+</script>
