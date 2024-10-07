@@ -1,0 +1,102 @@
+# Node.js dependencies (if any)
+node_modules/
+npm-debug.log*
+yarn-error.log
+
+# Logs
+logs/
+*.log
+*.log.*
+
+# Environment variables
+.env
+.env.*.local
+
+# IDE settings
+/.vscode/
+/.idea/
+/*.sublime-project
+/*.sublime-workspace
+
+# macOS files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows thumbnail caches
+Thumbs.db
+ehthumbs.db
+
+# System files
+Desktop.ini
+
+# PHP related files
+*.cache
+*.tmp
+*.bak
+*.swp
+*.orig
+
+# Composer dependencies
+/vendor/
+
+# MySQL dump files
+*.sql
+
+# Build and distribution directories
+/dist/
+/build/
+/out/
+
+# Temporary files
+*.tmp
+*.swp
+*.bak
+
+# Compiled files
+*.o
+*.so
+*.dll
+*.exe
+
+# Backup files
+*.bak
+*.old
+
+# Ignore API Keys and Secrets
+*.pem
+*.p12
+*.key
+*.crt
+*.csr
+*.der
+*.json
+
+# Ignore specific PHP files (if any sensitive or temporary)
+*.log
+*.sqlite3
+
+# Git related files
+.git/
+
+# Ignore any lock files
+*.lock
+*.pid
+*.seed
+
+# Ignore SASS cache
+.sass-cache/
+
+# Ignore coverage files for testing
+coverage/
+.nyc_output/
+
+# Ignore specific GCP keys
+strong-keyword-431709-a9-d10d38b03536.json
+
+# Ignore compiled assets or build output
+/public/assets/*
+/public/dist/*
+/public/build/*
+
+strong-keyword-431709-a9-d10d38b03536.json
