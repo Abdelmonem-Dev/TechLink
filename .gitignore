@@ -13,10 +13,10 @@ logs/
 .env.*.local
 
 # IDE settings
-/.vscode/
-/.idea/
-/*.sublime-project
-/*.sublime-workspace
+*.vscode
+*.idea
+*.sublime-project
+*.sublime-workspace
 
 # macOS files
 .DS_Store
@@ -76,32 +76,38 @@ Desktop.ini
 *.log
 *.sqlite3
 
-# Git related files
-.git/
-
-# Ignore any lock files
+# Ignore lock files
 *.lock
 *.pid
 *.seed
 
-# Ignore SASS cache
+# SASS cache
 .sass-cache/
 
-# Ignore coverage files for testing
+# Testing coverage
 coverage/
 .nyc_output/
 
-# Ignore specific GCP keys
+# GCP keys
 strong-keyword-431709-a9-d10d38b03536.json
 
-# Ignore compiled assets or build output
-/public/assets/*
-/public/dist/*
-/public/build/*
+# Compiled assets or build output
+/public/globals
+/public/uploads
+/public/images
 
-strong-keyword-431709-a9-d10d38b03536.json
+# Temporary or specific project files
 router.php
 country.json
 composer.json
-vendor
 composer.lock
+
+# Miscellaneous
+rholog-*
+sim-*
+bin/libs
+bin/RhoBundle
+bin/tmp
+bin/target
+bin/*.ap_
+*.jar
